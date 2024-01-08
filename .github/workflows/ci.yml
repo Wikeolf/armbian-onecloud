@@ -16,6 +16,7 @@ env:
   UBOOT_BURNIMG: eMMC.burn.img
   ARMBIAN_REPO: Wikeolf/armbian-onecloud
   ARMBIAN_REF: main
+  KERNEL_BRANCH: v5.10.149
 
 jobs:
   prepare:
@@ -95,6 +96,10 @@ jobs:
         with:
           repository: ${{ env.ARMBIAN_REPO }}
           ref: ${{ env.ARMBIAN_SHA }}
+      
+      - name: Change Kernel version
+        run: |
+          echo "KERNELBRANCH=\"tag:${KERNEL_BRANCH}\"" >>userpatches/lib.config
 
       - name: Build
         run: |
