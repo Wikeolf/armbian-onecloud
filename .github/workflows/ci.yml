@@ -14,8 +14,8 @@ env:
   UBOOT_REPO: hzyitc/u-boot-onecloud
   UBOOT_RELEASE: latest
   UBOOT_BURNIMG: eMMC.burn.img
-  ARMBIAN_REPO: armbian/build
-  ARMBIAN_REF: master
+  ARMBIAN_REPO: wikeolf/armbian-onecloud
+  ARMBIAN_REF: main
 
 jobs:
   prepare:
@@ -104,6 +104,7 @@ jobs:
             KERNEL_CONFIGURE=no \
             KERNEL_ONLY=yes \
             EXPERT=yes \
+            ROOTFS_TYPE=btrfs\
             USE_CCACHE=no \
             NO_APT_CACHER=yes
           sudo chown $(id -u):$(id -g) -R output/
