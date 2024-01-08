@@ -109,7 +109,6 @@ jobs:
             KERNEL_CONFIGURE=no \
             KERNEL_ONLY=yes \
             EXPERT=yes \
-            ROOTFS_TYPE=btrfs \
             USE_CCACHE=no \
             NO_APT_CACHER=yes
           sudo chown $(id -u):$(id -g) -R output/
