@@ -178,6 +178,7 @@ jobs:
             RELEASE=${{ matrix.RELEASE }} \
             KERNEL_CONFIGURE=no \
             KERNEL_ONLY=no \
+            ROOTFS_TYPE=btrfs \
             BUILD_MINIMAL=${{ matrix.TYPE == 'minimal' && 'yes' || 'no' }} \
             BUILD_DESKTOP=${{ matrix.TYPE == 'desktop' && 'yes' || 'no' }} \
             DESKTOP_ENVIRONMENT=${{ matrix.DESKTOP_ENVIRONMENT }} \
