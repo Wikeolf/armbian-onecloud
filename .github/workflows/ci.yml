@@ -166,6 +166,7 @@ jobs:
               BOARD=onecloud \
               BRANCH=${{ matrix.BRANCH }} \
               EXPERT=yes \
+              ROOTFS_TYPE=btrfs \
               USE_CCACHE=no
           sudo chown $(id -u):$(id -g) -R output/
 
