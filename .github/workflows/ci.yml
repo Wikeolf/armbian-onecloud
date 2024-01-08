@@ -15,7 +15,7 @@ env:
   UBOOT_RELEASE: latest
   UBOOT_BURNIMG: eMMC.burn.img
   ARMBIAN_REPO: armbian/build
-  ARMBIAN_REF: main
+  ARMBIAN_REF: 01e5e2ca37d5e215fdcdbce7f11e4c4a085a5d07
   PATCHES: 4077,5076
   PATCHES_DISABLED: 5082
 
